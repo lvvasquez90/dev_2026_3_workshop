@@ -50,7 +50,7 @@ class Data:
         lisindup = []
         for i in lista:
             if i not in lisindup:
-                lisindup.insert(0, lista[i])
+                lisindup.append(0, i)
         return lisindup
     
     def merge_ordenado(self, lista1, lista2):
