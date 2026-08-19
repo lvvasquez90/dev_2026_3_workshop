@@ -31,8 +31,8 @@ class Data:
         Returns:
             int: Índice del elemento o -1 si no se encuentra
         """
-        for i in lista:
-            if lista[i] == elemento:
+        for i in range(lista):
+            if elemento == lista[i]:
                 return i
         return -1
     
