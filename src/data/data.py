@@ -48,7 +48,7 @@ class Data:
             list: Lista sin elementos duplicados
         """
         lisindup = []
-        for i in range(lista):
+        for i in range(len(lista)):
             if lista[i] not in lisindup:
                 lisindup.insert(0, lista[i])
         return lisindup
