@@ -31,7 +31,11 @@ class Data:
         Returns:
             int: Índice del elemento o -1 si no se encuentra
         """
-        pass
+        indice = -1
+        for i in lista:
+            if lista[i] == elemento:
+                indice = i
+        return indice
     
     def eliminar_duplicados(self, lista):
         """
