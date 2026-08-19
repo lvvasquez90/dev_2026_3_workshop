@@ -49,6 +49,8 @@ class Data:
         """
         lisindup = []
         for elem in lista:
+            if type(elem) == bool:
+                elem = str(elem)
             if elem not in lisindup:
                 lisindup.append(elem)
         return lisindup
