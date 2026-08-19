@@ -52,6 +52,7 @@ class Data:
             exist = True
             for i in lisindup:    
                 if elem == i and type(elem) == type(i):
+                    exist = False
                     break
             if exist:
                 lisindup.append(elem)
