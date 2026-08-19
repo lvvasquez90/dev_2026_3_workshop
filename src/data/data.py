@@ -84,7 +84,7 @@ class Data:
         Returns:
             list: Lista rotada
         """
-        if k == 0:
+        if k == 0 or not lista:
             return lista
         
         k = k % len(lista)
