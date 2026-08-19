@@ -16,7 +16,7 @@ class Data:
         """
         linver = []
         for i in lista:
-            linver.append(0, i)
+            linver.insert(0, i)
         return linver
     
     def buscar_elemento(self, lista, elemento):
