@@ -49,9 +49,12 @@ class Data:
         """
         lisindup = []
         for elem in lista:
-            for entos in lisindup:
-                if elem not in lisindup and type(elem) != type(entos):
-                    lisindup.append(elem)
+            exist = True
+            for i in lisindup:    
+                if elem == i and type(elem) == type(i):
+                    break
+            if exist:
+                lisindup.append(elem)
         return lisindup
     
     def merge_ordenado(self, lista1, lista2):
