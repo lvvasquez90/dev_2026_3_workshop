@@ -48,9 +48,9 @@ class Data:
             list: Lista sin elementos duplicados
         """
         lisindup = []
-        for i in lista:
-            if i not in lisindup:
-                lisindup.insert(0, i)
+        for elem in lista:
+            if elem not in lisindup:
+                lisindup.append(elem)
         return lisindup
     
     def merge_ordenado(self, lista1, lista2):
