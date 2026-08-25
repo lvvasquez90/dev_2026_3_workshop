@@ -70,7 +70,12 @@ class Data:
             list: Lista combinada y ordenada
         """
         listcord = lista1 + lista2
-        listcord.sort()
+        long = len(listcord)
+        for i in range(long):
+            for j in range(0, long - i - 1):
+                if listcord[j] > listcord[i]:
+                    listcord[j] = listcord[i]
+                    listcord[i] = listcord[j]
         return listcord
     
     def rotar_lista(self, lista, k):
