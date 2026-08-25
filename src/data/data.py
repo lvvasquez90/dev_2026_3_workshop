@@ -73,9 +73,9 @@ class Data:
         long = len(listcord)
         for i in range(long):
             for j in range(0, long - i - 1):
-                if listcord[j] > listcord[i]:
-                    listcord[j] = listcord[i]
-                    listcord[i] = listcord[j]
+                if listcord[j] > listcord[j + 1]:
+                    listcord[j] = listcord[j + 1]
+                    listcord[j + 1] = listcord[j]
         return listcord
     
     def rotar_lista(self, lista, k):
