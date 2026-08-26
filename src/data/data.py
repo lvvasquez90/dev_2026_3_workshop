@@ -216,14 +216,15 @@ class Data:
         Returns:
             list: Matriz transpuesta
         """
-        if len(matriz) == 0 or len(matriz) == 1:
-            return matriz
+        matri = matriz
+        if len(matri) == 0 or len(matri) == 1:
+            return matri
         else:
-            cantfil = len(matriz)
-            cantcol = len(matriz[0])
+            cantfil = len(matri)
+            cantcol = len(matri[0])
             trapue = [[None for _ in range(cantfil)] for _ in range(cantcol)]
             
             for i in range(cantcol):
                 for j in range(cantfil):
-                    trapue[j][i] = matriz[i][j]
+                    trapue[j][i] = matri[i][j]
             return trapue
