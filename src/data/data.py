@@ -145,7 +145,27 @@ class Data:
         Returns:
             dict: Diccionario con métodos push, pop, peek y is_empty
         """
-        pass
+        def is_empty(pila):
+            if len(pila) == 0:
+                return True
+            else:
+                return False
+        
+        def push(pila, a):
+            return pila.append(a)
+        
+        def peek(pila):
+            return pila[-1]
+        
+        def pop(pila):
+            return pila.pop()
+        
+        pila = {
+            'is_empty': is_empty,
+            'push': push,
+            'peek': peek,
+            'pop': pop    
+        }
     
     def implementar_cola(self):
         """
