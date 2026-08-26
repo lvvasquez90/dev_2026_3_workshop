@@ -219,7 +219,7 @@ class Data:
         cantfil = len(matriz)
         cantcol = len(matriz[0])
         
-        trapue = [[0 for _ in range(cantfil)] for _ in range(cantcol)]
+        trapue = []
         
         for i in range(cantfil):
             for j in range(cantcol):
