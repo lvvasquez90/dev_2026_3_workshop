@@ -222,9 +222,9 @@ class Data:
         if cantfil == 0 or cantcol == 1:
             return matriz
         else:
-            trapue = [[0 for _ in range(cantfil)] for _ in range(cantcol)]
+            trapue = [[None for _ in range(cantfil)] for _ in range(cantcol)]
             
-            for i in range(cantfil):
-                for j in range(cantcol):
+            for i in range(cantcol):
+                for j in range(cantfil):
                     trapue[j][i] = matriz[i][j]
             return trapue
