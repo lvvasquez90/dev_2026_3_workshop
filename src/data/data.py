@@ -128,7 +128,14 @@ class Data:
         Returns:
             bool: True si conjunto1 es subconjunto de conjunto2, False en caso contrario
         """
-        pass
+        long = len(conjunto1)
+        veri = 0
+        for i in conjunto2:
+            if i == conjunto1:
+                veri += 1
+        if veri == long:
+            return True
+        return False
     
     def implementar_pila(self):
         """
