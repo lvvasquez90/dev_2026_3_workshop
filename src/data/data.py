@@ -216,4 +216,12 @@ class Data:
         Returns:
             list: Matriz transpuesta
         """
-        pass
+        cantfil = len(matriz)
+        cantcol = len(matriz[0])
+        
+        trapue = [[0 for _ in range(cantfil)] for _ in range(cantcol)]
+        
+        for i in range(cantfil):
+            for j in range(cantcol):
+                trapue[i][j] = matriz[i][j]
+        return trapue
