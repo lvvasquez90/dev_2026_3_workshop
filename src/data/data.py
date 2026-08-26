@@ -191,7 +191,7 @@ class Data:
             lista.append(a)
         
         def dequeue():
-            eli = lista.get()
+            eli = lista.pop(0)
             return eli
         
         def peek():
