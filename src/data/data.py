@@ -170,7 +170,7 @@ class Data:
             'pop': pop    
         }
         
-        return lista
+        return pila
     
     def implementar_cola(self):
         """
