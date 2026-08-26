@@ -219,9 +219,12 @@ class Data:
         cantfil = len(matriz)
         cantcol = len(matriz[0])
         
-        trapue = []
-        
-        for i in range(cantfil):
-            for j in range(cantcol):
-                trapue[j][i] = matriz[i][j]
-        return trapue
+        if cantfil == 0 or cantcol == 1:
+            return matriz
+        else:
+            trapue = []
+            
+            for i in range(cantfil):
+                for j in range(cantcol):
+                    trapue[j][i] = matriz[i][j]
+            return trapue
