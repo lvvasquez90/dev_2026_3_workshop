@@ -108,7 +108,14 @@ class Data:
         Returns:
             int: El número que falta en la secuencia
         """
-        pass
+        long = len(lista) + 1
+        if long != 1:
+            suma = long * (long + 1) / 2
+            real = sum(lista)
+        else:
+            suma = long
+            real = 0
+        return suma - real
     
     def es_subconjunto(self, conjunto1, conjunto2):
         """
