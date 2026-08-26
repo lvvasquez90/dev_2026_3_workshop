@@ -223,5 +223,5 @@ class Data:
         
         for i in range(cantfil):
             for j in range(cantcol):
-                trapue[i][j] = matriz[i][j]
+                trapue[j][i] = matriz[i][j]
         return trapue
