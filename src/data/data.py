@@ -224,7 +224,7 @@ class Data:
             cantcol = len(matri[0])
             trapue = [[None for _ in range(cantfil)] for _ in range(cantcol)]
             
-            for i in range(cantcol):
-                for j in range(cantfil):
+            for i in range(cantfil):
+                for j in range(cantcol):
                     trapue[j][i] = matri[i][j]
             return trapue
