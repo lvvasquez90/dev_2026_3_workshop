@@ -146,16 +146,20 @@ class Data:
             dict: Diccionario con métodos push, pop, peek y is_empty
         """
         def is_empty():
-            return True
+            if len(pila) == 0:
+                return True
+            else:
+                return False
         
         def push(a):
-            return pila.append(a)
+            pila.append(a)
         
         def peek():
             return pila[-1]
         
         def pop():
-            return pila.pop()
+            eli = pila.pop()
+            return eli
         
         pila = {
             'is_empty': is_empty,
