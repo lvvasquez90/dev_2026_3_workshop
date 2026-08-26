@@ -179,7 +179,32 @@ class Data:
         Returns:
             dict: Diccionario con métodos enqueue, dequeue, peek y is_empty
         """
-        pass
+        lista = []
+        
+        def is_empty():
+            if len(lista) == 0:
+                return True
+            else:
+                return False
+        
+        def enqueue(a):
+            lista.append(a)
+        
+        def dequeue():
+            eli = lista.popleft()
+            return eli
+        
+        def peek():
+            return lista[0]
+        
+        cola = {
+            'is_empty': is_empty,
+            'enqueue': enqueue,
+            'dequeue': dequeue,
+            'peek': peek
+        }
+        
+        return cola
     
     def matriz_transpuesta(self, matriz):
         """
