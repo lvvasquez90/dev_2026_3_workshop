@@ -216,12 +216,11 @@ class Data:
         Returns:
             list: Matriz transpuesta
         """
-        cantfil = len(matriz)
-        cantcol = len(matriz[0])
-        
-        if cantfil == 0 or cantcol == 1:
+        if len(matriz) == 0 or len(matriz) == 1:
             return matriz
         else:
+            cantfil = len(matriz)
+            cantcol = len(matriz[0])
             trapue = [[None for _ in range(cantfil)] for _ in range(cantcol)]
             
             for i in range(cantcol):
