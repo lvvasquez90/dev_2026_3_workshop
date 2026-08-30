@@ -114,11 +114,8 @@ class Conversion:
             return 0
         posi = 0
         deci = 0
-        nbin = int(binario)
-        while nbin > 0:
-            i = binario % 10
+        for i in reversed(binario):
             deci += i * (2 ** posi)
-            nbin //=10
             posi += 1
         return deci
             
