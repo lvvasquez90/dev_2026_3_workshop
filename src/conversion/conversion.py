@@ -114,8 +114,10 @@ class Conversion:
             return 0
         posi = 0
         deci = 0
-        for i in binario:
+        while int(binario) > 0:
+            i = binario % 10
             deci += i * (2 ** posi)
+            binario //=10
             posi += 1
         return deci
             
