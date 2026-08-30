@@ -113,7 +113,7 @@ class Conversion:
         deci = 0
         posi = 0
         for i in int(binario):
-            deci = i * (2 ** posi)
+            deci = i * (2 ** posi) + deci
             posi += 1
         return deci
             
