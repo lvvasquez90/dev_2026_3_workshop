@@ -143,10 +143,11 @@ class Conversion:
             (400, 'CD'), (500, 'D'), (900, 'CM'), (1000, 'M')
         ]
         roma = ""
-        for num, simbo in simb:
-            while numero >= num:
-                roma += simbo
-                numero -= num
+        while numero > 0:
+            for num, simbo in simb:
+                while numero >= num:
+                    roma += simbo
+                    numero -= num
         return roma
     
     def romano_a_decimal(self, romano):
