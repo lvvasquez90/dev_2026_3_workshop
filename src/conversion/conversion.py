@@ -112,12 +112,15 @@ class Conversion:
         """
         if binario == "0":
             return 0
-        posi = 0
-        deci = 0
-        for i in reversed(binario):
-            deci += i * (2 ** posi)
-            posi += 1
-        return deci
+        elif binario == "1":
+            return 1
+        else:
+            posi = 0
+            deci = 0
+            for i in reversed(binario):
+                deci += i * (2 ** posi)
+                posi += 1
+            return deci
             
     
     def decimal_a_romano(self, numero):
