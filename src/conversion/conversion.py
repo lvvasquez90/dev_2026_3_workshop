@@ -93,7 +93,7 @@ class Conversion:
         while decimal > 0:
             resi = decimal % 2
             bina = str(resi) + bina
-            decimal = decimal / 2
+            decimal = decimal // 2
         return bina
     
     def binario_a_decimal(self, binario):
