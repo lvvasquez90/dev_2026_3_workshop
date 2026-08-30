@@ -110,10 +110,9 @@ class Conversion:
             binario_a_decimal("1010") -> 10
             binario_a_decimal("11111111") -> 255
         """
-        deci = 0
         posi = 0
-        for i in int(binario):
-            deci = i * (2 ** posi) + deci
+        for i in binario:
+            deci += i * (2 ** posi)
             posi += 1
         return deci
             
