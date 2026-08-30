@@ -243,7 +243,7 @@ class Conversion:
         if morse == "":
             return ""
         else:
-            pali = morse.strip().split('  ')
+            pali = morse.strip().split('   ')
             tex = []
             for i in pali:
                 let = i.split(' ')
