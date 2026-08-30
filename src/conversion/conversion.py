@@ -171,8 +171,8 @@ class Conversion:
         }
         deci = 0
         prev = 0
-        for simb in reversed(romano):
-            num = simb[simb]
+        for simbo in reversed(romano):
+            num = simb[simbo]
             if num >= prev:
                 deci += num
             else:
