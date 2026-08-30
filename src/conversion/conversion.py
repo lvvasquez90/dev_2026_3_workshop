@@ -243,8 +243,12 @@ class Conversion:
         if morse == "":
             return ""
         else:
+            pali = morse.strip().split('  ')
             tex = []
-            for i in morse:
-                if i in codi:
-                    tex.append(codi[i])
-            return tex
+            for i in pali:
+                let = i.split(' ')
+                pala = ''
+                if let in codi:
+                    pala += codi[let]
+                tex.append(pala)
+            return ' '.join(tex)
