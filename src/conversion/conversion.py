@@ -206,10 +206,10 @@ class Conversion:
         if texto == "":
             return ""
         else:
-            morse = ""
+            morse = []
             for i in texto:
                 if i in codi:
-                    morse += codi[i]
+                    morse.append(codi[i])
             return morse
     
     def morse_a_texto(self, morse):
