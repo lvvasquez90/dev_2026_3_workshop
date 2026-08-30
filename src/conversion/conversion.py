@@ -137,7 +137,17 @@ class Conversion:
             decimal_a_romano(9) -> "IX"
             decimal_a_romano(1994) -> "MCMXCIV"
         """
-        pass
+        simb = [
+            (1, 'I'), (4, 'IV'), (5, 'V'), (9, 'IX'), (10, 'X'),
+            (40, 'XL'), (50, 'L'), (90, 'XC'), (100, 'C'),
+            (400, 'CD'), (500, 'D'), (900, 'CM'), (1000, 'M')
+        ]
+        roma = ""
+        for num, simbo in simb:
+            cant = numero // num
+            roma += simbo * cant
+            numero %= num
+        return roma
     
     def romano_a_decimal(self, romano):
         """
