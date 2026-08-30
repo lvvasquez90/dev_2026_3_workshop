@@ -118,7 +118,7 @@ class Conversion:
             posi = 0
             deci = 0
             for i in reversed(binario):
-                deci += i * (2 ** posi)
+                deci += int(i) * (2 ** posi)
                 posi += 1
             return deci
             
