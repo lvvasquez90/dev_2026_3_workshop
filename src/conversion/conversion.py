@@ -144,9 +144,9 @@ class Conversion:
         ]
         roma = ""
         for num, simbo in simb:
-            cant = numero // num
-            roma += simbo * cant
-            numero %= num
+            while numero >= num:
+                roma += simbo
+                numero -= num
         return roma
     
     def romano_a_decimal(self, romano):
