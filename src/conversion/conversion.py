@@ -113,6 +113,7 @@ class Conversion:
         if binario == "0":
             return 0
         posi = 0
+        deci = 0
         for i in binario:
             deci += i * (2 ** posi)
             posi += 1
