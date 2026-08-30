@@ -164,7 +164,21 @@ class Conversion:
             romano_a_decimal("IX") -> 9
             romano_a_decimal("MCMXCIV") -> 1994
         """
-        pass
+        simb = {
+            'I': 1, 'IV': 4, 'V': 5, 'IX': 9, 'X': 10,
+            'XL': 40, 'L': 50, 'XC': 90, 'C': 100,
+            'CD': 400, 'D': 500, 'CM': 900, 'M': 1000
+        }
+        deci = 0
+        prev = 0
+        for simb in reversed(romano):
+            num = simb[simb]
+            if num >= prev:
+                deci += num
+            else:
+                deci -= num
+            prev = num
+        return deci
     
     def texto_a_morse(self, texto):
         """
