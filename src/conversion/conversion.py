@@ -210,7 +210,7 @@ class Conversion:
             for i in texto:
                 if i in codi:
                     morse.append(codi[i])
-            return morse
+            return ' '.join(morse)
     
     def morse_a_texto(self, morse):
         """
