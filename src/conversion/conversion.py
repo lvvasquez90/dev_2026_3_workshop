@@ -52,7 +52,8 @@ class Conversion:
         Ejemplo:
             metros_a_pies(1) -> 3.28084
         """
-        pass
+        pie = metros * (3.28084)
+        return pie
     
     def pies_a_metros(self, pies):
         """
