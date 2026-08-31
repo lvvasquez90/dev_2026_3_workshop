@@ -107,6 +107,7 @@ class Games:
         lon = len(colores_disponibles)
         if lon == longitud:
             combi = colores_disponibles.copy()
+            return combi
     
     def validar_movimiento_torre_ajedrez(self, desde_fila, desde_col, hasta_fila, hasta_col, tablero):
         """
