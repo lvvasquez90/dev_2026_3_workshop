@@ -83,7 +83,7 @@ class Games:
             return "O"
         elif not tablero:
             return "continua"
-        else:
+        elif (ganador(tablero, "O") == False and ganador(tablero, "X") == False):
             return "empate"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
