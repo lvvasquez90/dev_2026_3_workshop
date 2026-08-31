@@ -241,7 +241,7 @@ class Formulas:
         tup = []
         x, x2 = 0, 0
         if raiz < 0:
-            return ValueError
+            raise ValueError
         else:
             x = (-b + (raiz ** 0.5)) / (2 * a)
             x2 = (-b - (raiz ** 0.5)) / (2 * a)
