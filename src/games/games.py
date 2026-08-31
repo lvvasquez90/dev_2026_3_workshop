@@ -67,7 +67,28 @@ class Games:
              ["O", "O", " "],
              [" ", " ", " "]] -> "X"
         """
-        pass
+        def ganador(tabpo, val):
+            return (
+                (tabpo[0] == tabpo[1] == tabpo[2] == val) or
+                (tabpo[0] == tabpo[4] == tabpo[8] == val) or
+                (tabpo[0] == tabpo[3] == tabpo[6] == val) or
+                (tabpo[1] == tabpo[4] == tabpo[7] == val) or
+                (tabpo[2] == tabpo[5] == tabpo[8] == val) or
+                (tabpo[2] == tabpo[4] == tabpo[6] == val)
+            )
+        if not tablero:
+            return "continua"
+        else:
+            for _ in range(9):
+                if (ganador(tablero, "X") == "False" and ganador(tablero, "O") == "False"):
+                    return "empate"
+        for _ in range(9):
+            if ganador(tablero, "X"):
+                return "X"
+            elif ganador(tablero, "O"):
+                return "O"
+            elif (ganador(tablero, "O") == "False"):
+                return "continua"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
         """
