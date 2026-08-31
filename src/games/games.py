@@ -76,18 +76,15 @@ class Games:
                 (tabpo[2] == tabpo[5] == tabpo[8] == val) or
                 (tabpo[2] == tabpo[4] == tabpo[6] == val)
             )
-        tablero = [letra for i in tablero for letra in i]
-        if not tablero:
+        tablero = [letra for fila in tablero for letra in fila]
+        if ganador(tablero, "X"):
+            return "X"
+        elif ganador(tablero, "O"):
+            return "O"
+        elif " " in tablero:
             return "continua"
         else:
-            if ganador(tablero, "X"):
-                return "X"
-            elif ganador(tablero, "O"):
-                return "O"
-            elif (ganador(tablero, "X") == False and ganador(tablero, "O") == False):
-                return "empate"
-            elif (ganador(tablero, "O") == False):
-                return "continua"
+            return "empate"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
         """
