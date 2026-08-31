@@ -103,6 +103,7 @@ class Games:
             generar_combinacion_mastermind(4, ["rojo", "azul", "verde"]) 
             -> ["rojo", "azul", "rojo", "verde"]
         """
+        import random
         combi = []
         lon = len(colores_disponibles)
         if longitud == 0:
@@ -112,10 +113,9 @@ class Games:
                 combi.append(colores_disponibles[0])
             elif longitud >= lon:
                 while longitud > 0:
-                    ind = id(object()) % lon
+                    ind = random.randint(1, lon)
                     combi.append(colores_disponibles[ind])
                     longitud -= 1
-                    ind -= 1
             return combi
     
     def validar_movimiento_torre_ajedrez(self, desde_fila, desde_col, hasta_fila, hasta_col, tablero):
