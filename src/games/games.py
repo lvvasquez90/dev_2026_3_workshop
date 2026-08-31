@@ -81,7 +81,7 @@ class Games:
             return "X"
         elif ganador(tablero, "O"):
             return "O"
-        elif " " in tablero:
+        elif not tablero:
             return "continua"
         else:
             return "empate"
