@@ -237,7 +237,16 @@ class Formulas:
         Ejemplo:
             raices_cuadraticas(1, -3, 2) -> (2.0, 1.0)
         """
-        pass
+        raiz = self.discriminante(a, b, c)
+        tup = []
+        x, x2 = 0
+        if raiz < 0:
+            return ValueError
+        else:
+            x = (-b + (raiz ** 0.5)) / (2 * a)
+            x2 = (-b - (raiz ** 0.5)) / (2 * a)
+            tup.append(x, x2)
+            return tup
 
     def imc(self, peso, altura):
         """
