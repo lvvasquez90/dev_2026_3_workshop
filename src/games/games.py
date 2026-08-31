@@ -139,7 +139,7 @@ class Games:
         if (hasta_fila == desde_fila and desde_col == hasta_col) or (desde_col != hasta_col and desde_fila != hasta_fila):
             return False
         else:
-            if hasta_col < len(tablero[0]):
+            if hasta_col < len(tablero[0]) or hasta_fila < len(tablero):
                 if desde_fila != hasta_fila:            
                     for i in range(desde_fila, hasta_fila):
                         if tablero[i][desde_col] != " ":
