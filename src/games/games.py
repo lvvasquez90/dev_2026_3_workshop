@@ -112,9 +112,10 @@ class Games:
                 combi.append(colores_disponibles[0])
             elif longitud >= lon:
                 while longitud > 0:
-                    ind = id([]) % lon
+                    ind = id(object()) % lon
                     combi.append(colores_disponibles[ind])
                     longitud -= 1
+                    ind -= 1
             return combi
     
     def validar_movimiento_torre_ajedrez(self, desde_fila, desde_col, hasta_fila, hasta_col, tablero):
