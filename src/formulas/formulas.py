@@ -239,7 +239,7 @@ class Formulas:
         """
         raiz = self.discriminante(a, b, c)
         tup = []
-        x, x2 = 0
+        x, x2 = 0, 0
         if raiz < 0:
             return ValueError
         else:
