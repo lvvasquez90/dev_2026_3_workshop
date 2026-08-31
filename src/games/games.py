@@ -113,7 +113,7 @@ class Games:
                 combi.append(colores_disponibles[0])
             elif longitud >= lon:
                 while longitud > 0:
-                    ind = random.randint(1, lon)
+                    ind = random.randint(0, lon)
                     combi.append(colores_disponibles[ind])
                     longitud -= 1
             return combi
