@@ -74,7 +74,9 @@ class Games:
                 (tabpo[0] == tabpo[3] == tabpo[6] == val) or
                 (tabpo[1] == tabpo[4] == tabpo[7] == val) or
                 (tabpo[2] == tabpo[5] == tabpo[8] == val) or
-                (tabpo[2] == tabpo[4] == tabpo[6] == val)
+                (tabpo[2] == tabpo[4] == tabpo[6] == val) or
+                (tabpo[3] == tabpo[4] == tabpo[5] == val) or
+                (tabpo[6] == tabpo[7] == tabpo[8] == val)
             )
         tablero = [letra for fila in tablero for letra in fila]
         if ganador(tablero, "X"):
