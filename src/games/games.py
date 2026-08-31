@@ -80,16 +80,15 @@ class Games:
         if not tablero:
             return "continua"
         else:
-            for _ in range(9):
-                if (ganador(tablero, "X") == "False" and ganador(tablero, "O") == "False"):
-                    return "empate"
-        for _ in range(9):
-            if ganador(tablero, "X"):
-                return "X"
-            elif ganador(tablero, "O"):
-                return "O"
-            elif (ganador(tablero, "O") == "False"):
-                return "continua"
+            if (ganador(tablero, "X") == False and ganador(tablero, "O") == False):
+                return "empate"
+        
+        if ganador(tablero, "X"):
+            return "X"
+        elif ganador(tablero, "O"):
+            return "O"
+        elif (ganador(tablero, "O") == False):
+            return "continua"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
         """
