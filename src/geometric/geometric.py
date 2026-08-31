@@ -330,7 +330,7 @@ class Geometria:
         pen = self.pendiente_recta(x1, y1, x2, y2)
         a = y2 - y1
         b = x1 - x2
-        c = (x2 * y1) - (x1 * y2)
+        c = - (a * x1 + b * y1)
         return (a, b, c)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
