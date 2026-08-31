@@ -27,7 +27,7 @@ class Games:
             (jugador1 == "papel" and jugador2 == "piedra")
         ):
             return "jugador1"
-        else:
+        elif jugador1 == jugador2:
             return "empate"
     
     def adivinar_numero_pista(self, numero_secreto, intento):
