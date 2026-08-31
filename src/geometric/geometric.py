@@ -327,13 +327,18 @@ class Geometria:
         Returns:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
+        def mcd(a, b):
+            while b != 0:
+                a, b = b, a % b
+            return a
+        
         a = y2 - y1
         b = x1 - x2
         c = - (a * x1 + b * y1)
         if a == 0 and (b % 2 == 0 and c % 2 == 0):
-            while b % 2 == 0 and c % 2 == 0:
-                b /= 2
-                c /= 2
+            div = mcd(b, c)
+            b /= div
+            c /= div
         return (a, b, c)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
