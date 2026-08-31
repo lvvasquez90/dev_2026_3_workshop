@@ -196,7 +196,10 @@ class Geometria:
         Returns:
             float: Volumen del cubo
         """
-        return lado ** 3
+        if lado <= 0:
+            return 0
+        else:
+            return lado ** 3
     
     def area_superficie_cubo(self, lado):
         """
