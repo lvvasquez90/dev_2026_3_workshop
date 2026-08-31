@@ -112,9 +112,7 @@ class Games:
                 combi.append(colores_disponibles[0])
             elif longitud >= lon:
                 while longitud > 0:
-                    ob = id(object())
-                    ob = (ob * 5 + 3) % 100
-                    ind = ob % lon
+                    ind = id(object()) % lon
                     combi.append(colores_disponibles[ind])
                     longitud -= 1
             return combi
