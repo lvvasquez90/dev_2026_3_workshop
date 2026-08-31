@@ -328,8 +328,8 @@ class Geometria:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
         pen = self.pendiente_recta(x1, y1, x2, y2)
-        b = y2 - y1
-        a = x1 - x2
+        a = y2 - y1
+        b = x1 - x2
         c = (x2 * y1) - (x1 * y2)
         return (a, b, c)
     
