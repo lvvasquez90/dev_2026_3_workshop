@@ -15,8 +15,12 @@ class Games:
             - Tijera vence a papel
             - Papel vence a piedra
         """
-        if jugador1 == jugador2:
-            return "empate"
+        if (
+            (jugador2 == "piedra" and jugador1 == "tijera") or
+            (jugador2 == "tijera" and jugador1 == "papel") or
+            (jugador2 == "papel" and jugador1 == "piedra")
+        ):
+            return "jugador2"
         elif (
             (jugador1 == "piedra" and jugador2 == "tijera") or
             (jugador1 == "tijera" and jugador2 == "papel") or
@@ -24,7 +28,7 @@ class Games:
         ):
             return "jugador1"
         else:
-            return "jugador2"
+            return "empate"
     
     def adivinar_numero_pista(self, numero_secreto, intento):
         """
