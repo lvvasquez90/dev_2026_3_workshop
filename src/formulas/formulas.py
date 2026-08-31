@@ -175,7 +175,8 @@ class Formulas:
         Ejemplo:
             interes_simple(1000, 0.05, 2) -> 100.0
         """
-        pass
+        inte_capsimp = capital * tasa * tiempo
+        return inte_capsimp
 
     def interes_compuesto(self, capital, tasa, tiempo, n=1):
         """
