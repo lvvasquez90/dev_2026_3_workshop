@@ -238,7 +238,7 @@ class Formulas:
             raices_cuadraticas(1, -3, 2) -> (2.0, 1.0)
         """
         raiz = self.discriminante(a, b, c)
-        tup = []
+        tup = ()
         x, x2 = 0, 0
         if raiz < 0:
             return ValueError
