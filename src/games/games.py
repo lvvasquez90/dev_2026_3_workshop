@@ -136,7 +136,7 @@ class Games:
             - La torre se mueve horizontal o verticalmente
             - No puede saltar sobre otras piezas
         """
-        if hasta_fila == hasta_col or hasta_fila == desde_fila and desde_col == hasta_col:
+        if (hasta_fila == hasta_col) or (hasta_fila == desde_fila and desde_col == hasta_col) or (desde_col != hasta_col and desde_fila != hasta_fila):
             return False
         else:
             return True
