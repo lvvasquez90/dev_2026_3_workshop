@@ -337,8 +337,12 @@ class Geometria:
         c = - (a * x1 + b * y1)
         if a == 0 and (b % 2 == 0 and c % 2 == 0):
             div = mcd(b, c)
-            b /= div
-            c /= div
+            if b < 0:
+                b /= -div
+                c /= -div
+            else:
+                b /= div
+                c /= div
         return (a, b, c)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
