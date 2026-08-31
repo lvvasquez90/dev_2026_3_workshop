@@ -245,7 +245,8 @@ class Formulas:
         else:
             x = (-b + (raiz ** 0.5)) / (2 * a)
             x2 = (-b - (raiz ** 0.5)) / (2 * a)
-            tup.extend(x, x2)
+            tup.append(x)
+            tup.append(x2)
             return tup
 
     def imc(self, peso, altura):
