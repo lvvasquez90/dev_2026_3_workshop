@@ -76,6 +76,7 @@ class Games:
                 (tabpo[2] == tabpo[5] == tabpo[8] == val) or
                 (tabpo[2] == tabpo[4] == tabpo[6] == val)
             )
+        tablero = [letra for i in tablero for letra in i]
         if not tablero:
             return "continua"
         else:
