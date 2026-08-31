@@ -328,9 +328,9 @@ class Geometria:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
         pen = self.pendiente_recta(x1, y1, x2, y2)
-        b = (pen * (x2 - x1)) + y1
-        a = ((y2 - y1) / pen) + x1
-        c = (-a * x1) - (b * y1)
+        b = y2 - y1
+        a = x1 - x2
+        c = (x2 * y1) - (x1 * y2)
         return (a, b, c)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
