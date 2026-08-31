@@ -328,7 +328,7 @@ class Geometria:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
         a = x2 - x1
-        b = y2 - y1
+        b = y1 - y2
         c = -a - b
         return (a, b, c)
     
