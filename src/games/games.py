@@ -108,11 +108,9 @@ class Games:
         if longitud == 0:
             return combi
         else:
-            if lon == longitud:
-                combi = colores_disponibles.copy()
-            elif longitud < lon:
+            if longitud < lon:
                 combi.append(colores_disponibles[0])
-            elif longitud > lon:
+            elif longitud >= lon:
                 ind = 0
                 while longitud > 0:
                     combi.append(colores_disponibles[ind % lon])
