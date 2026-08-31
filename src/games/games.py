@@ -83,7 +83,7 @@ class Games:
             return "X"
         elif ganador(tablero, "O"):
             return "O"
-        elif not tablero:
+        elif not tablero and ganador(tablero, "X"):
             return "continua"
         elif (ganador(tablero, "O") == False and ganador(tablero, "X") == False):
             return "empate"
