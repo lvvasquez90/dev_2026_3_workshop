@@ -103,6 +103,7 @@ class Games:
             generar_combinacion_mastermind(4, ["rojo", "azul", "verde"]) 
             -> ["rojo", "azul", "rojo", "verde"]
         """
+        import random
         combi = []
         lon = len(colores_disponibles)
         if longitud == 0:
@@ -114,7 +115,7 @@ class Games:
                 combi.append(colores_disponibles[0])
             elif longitud > lon:
                 while longitud > 0:
-                    ind = id(lon) % lon
+                    ind = random.randint(1, lon)
                     combi.append(colores_disponibles[ind])
                     longitud -= 1
             return combi
