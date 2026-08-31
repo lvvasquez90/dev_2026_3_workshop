@@ -266,7 +266,8 @@ class Formulas:
         Ejemplo:
             imc(70, 1.75) -> 22.86
         """
-        pass
+        indmc = peso / (altura ** 2)
+        return indmc
 
     def hipotenusa_pitagoras(self, cateto1, cateto2):
         """
