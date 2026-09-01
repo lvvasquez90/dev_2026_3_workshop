@@ -30,7 +30,7 @@ class Logica:
         Returns:
             bool: Resultado de a OR b
         """
-        if a == False AND b == a:
+        if a == False and b == a:
             return False
         else:
             return True
