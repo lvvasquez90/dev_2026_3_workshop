@@ -30,10 +30,6 @@ class Strings:
         Returns:
             str: Cadena invertida
         """
-        #if not texto:
-        #    return ""
-        #elif len(texto) == 1:
-        #    return texto
         inv = ""
         for i in texto:
             inv = i + inv
@@ -49,7 +45,13 @@ class Strings:
         Returns:
             int: Número de vocales en la cadena
         """
-        pass
+        voc = ["a", "e", "i", "o", "u"]
+        vcm = [vo.upper() for vo in voc]
+        sma = 0
+        for i in texto:
+            if i in voc or i in vcm:
+                sma += 1
+        return sma
     
     def contar_consonantes(self, texto):
         """
