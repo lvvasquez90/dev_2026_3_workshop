@@ -14,7 +14,10 @@ class Strings:
         Returns:
             bool: True si es palíndromo, False en caso contrario
         """
-        pass
+        rev = texto[::-1]
+        if rev == texto:
+            return True
+        return False
     
     def invertir_cadena(self, texto):
         """
