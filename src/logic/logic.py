@@ -117,7 +117,7 @@ class Logica:
             bool: Resultado de la implicación
         """
         if a == b:
-            return a
+            return True
         else:
             return b
     
