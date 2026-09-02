@@ -125,7 +125,7 @@ class Strings:
             str: Cadena con la primera letra de cada palabra en mayúscula
         """
         if not texto:
-            return 0
+            return ""
         sep = ""
         pali = True
         
