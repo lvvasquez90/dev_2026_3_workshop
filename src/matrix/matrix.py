@@ -268,7 +268,8 @@ class Matrix:
             identidad(2) -> [[1, 0], [0, 1]]
             identidad(3) -> [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
         """
-        pass
+        ide = [[1 if i == j else 0 for j in range(n)] for i in range(n)]
+        return ide
 
     def diagonal(self, matriz):
         """
