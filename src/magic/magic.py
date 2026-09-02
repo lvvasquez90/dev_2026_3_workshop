@@ -57,7 +57,7 @@ class Magic:
         """
         if n <= 1: 
             return False
-        elif n % 2 == 0:
+        elif n % 2 == 0 and n != 2:
             return False
         else:
             for i in range(2, n):
