@@ -168,7 +168,7 @@ class Strings:
         nume = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-"]
         cont = True
         for i in texto:
-            if i == "." and i not in nume:
+            if i == "." or i not in nume:
                 cont = False
         return cont
     
