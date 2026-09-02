@@ -174,17 +174,17 @@ class Magic:
         else:
             if a == 0:
                 diviso(divib, b)
-                if len(div) == 1:
-                    return div[-1]
+                if len(divib) == 1:
+                    return divib[-1]
                 else:
-                    maxi = mayor(div)
+                    maxi = mayor(divib)
                 return maxi
             elif b == 0:
                 diviso(divia, a)
-                if len(div) == 1:
-                    return div[-1]
+                if len(divia) == 1:
+                    return divia[-1]
                 else:
-                    maxi = mayor(div)
+                    maxi = mayor(divia)
                 return maxi
             else:
                 diviso(divia, a)
