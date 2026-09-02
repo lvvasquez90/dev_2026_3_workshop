@@ -331,7 +331,10 @@ class Matrix:
             rotar_90([[1, 2], [3, 4]]) -> [[3, 1], [4, 2]]
             rotar_90([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) -> [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
         """
-        pass
+        if len(matriz) == 1:
+            return matriz
+        inv = [list(fi) for fi in zip(*matriz[::-1])]
+        return inv
 
     def buscar_en_matriz(self, matriz, valor):
         """
