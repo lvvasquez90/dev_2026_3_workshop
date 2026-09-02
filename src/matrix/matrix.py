@@ -139,7 +139,7 @@ class Matrix:
         """
         if len(matriz) == 1:
             return True
-        elif len(matriz) != len(matriz[0]) or len(matriz) == 0:
+        elif not matriz or len(matriz) != len(matriz[0]):
             return False
         return True
 
