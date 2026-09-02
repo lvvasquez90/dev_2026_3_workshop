@@ -55,7 +55,9 @@ class Magic:
         Returns:
             bool: True si n es primo, False en caso contrario
         """
-        if n <= 1 and n % 2 == 0:
+        if n <= 1: 
+            return False
+        elif n % 2 == 0:
             return False
         else:
             for i in range(2, n):
