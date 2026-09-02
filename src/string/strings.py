@@ -126,10 +126,17 @@ class Strings:
         """
         if not texto:
             return 0
-        texto = texto.strip()
-        sep = texto.split()
-        sep = [pal[0].upper() + pal[1:] for pal in sep]
-        sep = " ".join(sep)
+        sep = ""
+        pali = True
+        
+        for i in texto:
+            if i != " " and pali:
+                sep += i.upper()
+                pali = False
+            else:
+                sep += i
+                if i == " ":
+                    pali = True
         return sep
     
     def eliminar_espacios_duplicados(self, texto):
