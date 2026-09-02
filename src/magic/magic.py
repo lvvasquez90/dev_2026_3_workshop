@@ -97,7 +97,7 @@ class Magic:
         div = 0
         if n == 0 or n == 1:
             return False
-        for i in range(n):
+        for i in range(1, n):
             if n % i == 0:
                 div += i
         if div == n:
