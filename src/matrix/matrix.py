@@ -118,7 +118,10 @@ class Matrix:
         Ejemplo:
             transpuesta([[1, 2, 3], [4, 5, 6]]) -> [[1, 4], [2, 5], [3, 6]]
         """
-        pass
+        if not matriz or len(matriz) == 1:
+            return matriz
+        tras = [[fi[i] for fi in matriz] for i in range(len[matriz[0]])]
+        return tras
 
     def es_cuadrada(self, matriz):
         """
