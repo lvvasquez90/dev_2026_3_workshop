@@ -88,7 +88,8 @@ class Matrix:
             for j in range(len(B[0])):
                 for k in range(len(A[0])):
                     mult += A[i][k] * B[k][j]
-                    finu.append(mult)
+                    
+                finu.append(mult)
             res.append(finu)
         return res
 
