@@ -82,14 +82,16 @@ class Strings:
         Returns:
             bool: True si son anagramas, False en caso contrario
         """
+        textosi1 = texto1.replace(" ", "")
+        textosi2 = texto2.replace(" ", "")
         cont = 0
-        if len(texto1) != len(texto2):
+        if len(textosi1) != len(textosi2):
             return False
-        for i in texto1:
-            for j in texto2:
+        for i in textosi1:
+            for j in textosi2:
                 if i == j:
                     cont += 1
-        if cont == len(texto1):
+        if cont == len(textosi1):
             return True
         else:
             return False
