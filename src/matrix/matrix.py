@@ -208,7 +208,9 @@ class Matrix:
             determinante_2x2([[3, 8], [4, 6]]) -> -14
             determinante_2x2([[1, 2], [3, 4]]) -> -2
         """
-        pass
+        if len(matriz) != 2:
+            raise ValueError
+        det=matriz[0][0]*matriz[1][1] - matriz[1][0]*[0][1]
 
     def determinante_3x3(self, matriz):
         """
