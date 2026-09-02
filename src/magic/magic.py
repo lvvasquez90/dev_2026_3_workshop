@@ -14,9 +14,15 @@ class Magic:
         Returns:
             int: El n-ésimo número de Fibonacci
         """
+        a = 0
+        b = 1
+        sec = 0
         fibo = 0
-        for i in range(1, n):
-            fibo += i
+        while sec < n:
+            fibo = a + b
+            a = b
+            b = fibo
+            sec += 1
         return fibo
     
     def secuencia_fibonacci(self, n):
