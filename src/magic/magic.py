@@ -17,7 +17,7 @@ class Magic:
         a = 0
         sec = 0
         fibo = 1
-        while len(sec) < n:
+        while sec < n:
             a = fibo
             fibo = a + fibo
             sec += 1
