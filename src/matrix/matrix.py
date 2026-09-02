@@ -179,7 +179,14 @@ class Matrix:
             traza([[1, 2], [3, 4]]) -> 5
             traza([[1, 0, 0], [0, 5, 0], [0, 0, 9]]) -> 15
         """
-        pass
+        def suma(n):
+            su = 0
+            for i in n:
+                su += i
+            return su
+        colu = len(matriz)
+        tra = suma(matriz[i][i] for i in range(colu))
+        return tra
 
     def determinante_2x2(self, matriz):
         """
