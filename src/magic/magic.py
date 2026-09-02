@@ -242,7 +242,14 @@ class Magic:
         Returns:
             bool: True si n es un número de Armstrong, False en caso contrario
         """
-        pass
+        numi = [int(dig) for dig in str(n)]
+        sumi = 0
+        for i in numi:
+            sumi += (i ** 3)
+        if sumi == n:
+            return True
+        else:
+            return False
     
     def es_cuadrado_magico(self, matriz):
         """
