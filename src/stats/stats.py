@@ -40,7 +40,7 @@ class Stats:
             posi = len(numeros) // 2
             return numeros[posi]
         else:
-            posi = len(numeros) / 2
+            posi = len(numeros) // 2
             num1 = numeros[posi - 1]
             num2 = numeros[posi]
             return (num1 + num2) / 2
