@@ -261,4 +261,24 @@ class Magic:
         Returns:
             bool: True si es un cuadrado mágico, False en caso contrario
         """
-        pass
+        def suma(n):
+            su = 0
+            for i in n:
+                su += i
+            return su
+        
+        if len(matriz) == 1:
+            return True
+        else:
+            sumog = suma(matriz[0])
+            for fi in matriz:
+                if suma(fi) != sumog:
+                    return False
+            for co in range(matriz):
+                if suma(matriz[fi][co] for fi in range(matriz)) != sumog:
+                    return False
+            if suma(matriz[i][i] for i in range(matriz)) != sumog:
+                return False
+            if suma(matriz[i][i] for i in range(matriz, 0, -1)) != sumog:
+                return False
+            return True
