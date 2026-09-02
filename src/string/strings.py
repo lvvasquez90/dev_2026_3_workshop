@@ -16,7 +16,7 @@ class Strings:
         """
         textosi = texto.replace(" ", "")
         rev = textosi[::-1]
-        if rev == texto:
+        if rev == textosi:
             return True
         return False
     
