@@ -137,7 +137,9 @@ class Matrix:
             es_cuadrada([[1, 2], [3, 4]]) -> True
             es_cuadrada([[1, 2, 3], [4, 5, 6]]) -> False
         """
-        pass
+        if len(matriz) != len(matriz[0]):
+            return False
+        return True
 
     def es_simetrica(self, matriz):
         """
