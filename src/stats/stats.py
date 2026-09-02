@@ -130,7 +130,7 @@ class Stats:
         Ejemplo:
             rango([1, 5, 3, 9, 2]) -> 8
         """
-        mni = numeros[0]
+        mni = 0
         may = numeros[0]
         for i in numeros:
             if may > i:
