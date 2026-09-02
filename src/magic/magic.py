@@ -138,9 +138,10 @@ class Magic:
         facto = 0
         if n == 0 or n == 1:
             return 1
-        for i in range(1, n):
-            facto *= i
-        return facto
+        else:
+            for i in range(1, n):
+                facto *= i
+            return facto
     
     def mcd(self, a, b):
         """
