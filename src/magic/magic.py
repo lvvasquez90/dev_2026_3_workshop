@@ -94,7 +94,14 @@ class Magic:
         Returns:
             bool: True si n es un número perfecto, False en caso contrario
         """
-        pass
+        div = 0
+        if n == 0 or n == 1:
+            return False
+        for i in range(n):
+            if n % i == 0:
+                div += i
+        if div == n:
+            return True
     
     def triangulo_pascal(self, filas):
         """
