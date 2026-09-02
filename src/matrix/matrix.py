@@ -102,13 +102,7 @@ class Matrix:
         Ejemplo:
             multiplicar_escalar([[1, 2], [3, 4]], 3) -> [[3, 6], [9, 12]]
         """
-        mules = []
-        for i in range(len(matriz)):
-            nue = []
-            for j in range(len(matriz[i])):
-                mul = matriz[i][j] * escalar
-                nue.append(mul)
-            mules.append(mul)
+        mules = [escalar * i for i in matriz]
         return mules
 
     def transpuesta(self, matriz):
