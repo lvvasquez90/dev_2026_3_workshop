@@ -42,7 +42,7 @@ class Stats:
         else:
             posi = len(numeros) // 2
             num1 = numeros[posi]
-            num2 = numeros[posi + 1]
+            num2 = numeros[posi - 1]
             return (num1 + num2) / 2
     
     def moda(self, numeros):
