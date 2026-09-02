@@ -82,8 +82,8 @@ class Strings:
         Returns:
             bool: True si son anagramas, False en caso contrario
         """
-        textosi1 = texto1.replace(" ", "")
-        textosi2 = texto2.replace(" ", "")
+        textosi1 = texto1.replace(" ", "").lower()
+        textosi2 = texto2.replace(" ", "").lower()
         cont = 0
         if len(textosi1) != len(textosi2):
             return False
