@@ -21,7 +21,7 @@ class Magic:
             sec.append(a)
             a = fibo
             fibo = a + fibo
-        return fibo
+        return a
     
     def secuencia_fibonacci(self, n):
         """
