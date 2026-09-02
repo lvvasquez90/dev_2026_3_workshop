@@ -49,7 +49,7 @@ class Strings:
         vcm = [vo.upper() for vo in voc]
         sma = 0
         for i in texto:
-            if i in voc and i in vcm:
+            if i in voc or i in vcm:
                 sma += 1
         return sma
     
