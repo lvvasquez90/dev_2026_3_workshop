@@ -151,8 +151,9 @@ class Strings:
         """
         if not texto:
             return ""
-        sep = texto.replace("  ", " ")
-        return sep
+        while "  " in texto:
+            texto = texto.replace("  ", " ")
+        return texto
     
     def es_numero_entero(self, texto):
         """
