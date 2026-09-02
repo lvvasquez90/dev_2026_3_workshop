@@ -21,7 +21,9 @@ class Matrix:
         Ejemplo:
             suma_matrices([[1, 2], [3, 4]], [[5, 6], [7, 8]]) -> [[6, 8], [10, 12]]
         """
-        pass
+        if len(A) != len(B):
+            raise ValueError
+        return A + B
 
     def resta_matrices(self, A, B):
         """
