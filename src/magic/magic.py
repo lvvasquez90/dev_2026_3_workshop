@@ -139,7 +139,7 @@ class Magic:
         if n == 0 or n == 1:
             return 1
         else:
-            for i in range(1, n):
+            for i in range(n, 0, -1):
                 facto *= i
             return facto
     
