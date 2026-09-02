@@ -82,11 +82,12 @@ class Matrix:
         if len(A[0]) != len(B):
             raise ValueError
         res = []
+        mult = 0
         for i in range(len(A)):
             finu = []
             for j in range(len(B[0])):
                 for k in range(len(A[0])):
-                    mult += A[i][k] - B[k][j]
+                    mult += A[i][k] * B[k][j]
                     finu.append(mult)
             res.append(finu)
         return res
