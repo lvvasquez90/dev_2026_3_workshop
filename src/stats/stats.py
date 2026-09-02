@@ -133,10 +133,9 @@ class Stats:
         mni = 0
         may = 0
         for i in numeros:
-            if i > mni:
-                mni = i
+            if i > may:
+                may = i
             if mni > may:
                 may, mni = mni, may
-                
         dist = may - mni
         return dist
