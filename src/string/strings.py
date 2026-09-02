@@ -190,7 +190,7 @@ class Strings:
                "s", "t", "u", "v", "w", "x", "y", "z"]
         dicm = [let.upper() for let in dic]
         cice = ""
-        for i in texto.lower():
+        for i in texto:
             if i in dic or i in dicm:
                 iac = dic.index(i)
                 inu = (iac + desplazamiento) % len(dic)
