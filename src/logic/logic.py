@@ -116,7 +116,10 @@ class Logica:
         Returns:
             bool: Resultado de la implicación
         """
-        pass
+        if a == b:
+            return a
+        else:
+            return b
     
     def bi_implicacion(self, a, b):
         """
