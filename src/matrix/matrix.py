@@ -251,7 +251,7 @@ class Matrix:
                 facto = mapi[j][i] / mapi[i][i]
                 for k in range(i, lon):
                     mapi[j][k] -= facto * mapi[i][k]
-        return det
+        return round(det, 10)
 
     def identidad(self, n):
         """
