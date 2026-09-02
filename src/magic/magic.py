@@ -75,7 +75,14 @@ class Magic:
         Returns:
             list: Lista de números primos hasta n
         """
-        pass
+        gen = []
+        if n == 1:
+            return gen
+        else:
+            for i in range(n):
+                if self.es_primo(i) == True:
+                    gen.append(i)
+            return gen
     
     def es_numero_perfecto(self, n):
         """
