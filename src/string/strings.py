@@ -191,10 +191,14 @@ class Strings:
         dicm = [let.upper() for let in dic]
         cice = ""
         for i in texto:
-            if i in dic or i in dicm:
+            if i in dic:
                 iac = dic.index(i)
                 inu = (iac + desplazamiento) % len(dic)
                 cice += dic[inu]
+            if i in dicm:
+                iac = dicm.index(i)
+                inu = (iac + desplazamiento) % len(dicm)
+                cice += dicm[inu]
         return cice
     
     def descifrar_cesar(self, texto, desplazamiento):
