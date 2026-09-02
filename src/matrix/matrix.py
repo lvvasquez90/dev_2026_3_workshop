@@ -120,7 +120,7 @@ class Matrix:
         """
         if not matriz or len(matriz) == 1:
             return matriz
-        tras = [[fi[i] for fi in matriz] for i in range(len[matriz[0]])]
+        tras = [[fi[i] for fi in matriz] for i in range(len(matriz[0]))]
         return tras
 
     def es_cuadrada(self, matriz):
