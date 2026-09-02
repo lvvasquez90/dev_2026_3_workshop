@@ -55,7 +55,12 @@ class Magic:
         Returns:
             bool: True si n es primo, False en caso contrario
         """
-        pass
+        if n < 1:
+            return False
+        elif n != 2 and n % 2 == 0:
+            return False
+        else:
+            return True
     
     def generar_primos(self, n):
         """
