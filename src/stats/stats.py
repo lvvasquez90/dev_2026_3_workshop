@@ -133,9 +133,7 @@ class Stats:
         mni = 0
         may = numeros[0]
         for i in numeros:
-            if may > i:
-                mni = i
-            else:
+            if may < mni:
                 mni = may
                 may = i
         dist = may - mni
