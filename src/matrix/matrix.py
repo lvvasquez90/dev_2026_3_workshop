@@ -23,7 +23,15 @@ class Matrix:
         """
         if len(A) != len(B):
             raise ValueError
-        return A + B
+        res = []
+        for i in range(len(A)):
+            finu = []
+            for j in range(len(A[0])):
+                suma = A[i][j] + B[i][j]
+                finu.append(suma)
+            res.append(finu)
+        return res
+                
 
     def resta_matrices(self, A, B):
         """
