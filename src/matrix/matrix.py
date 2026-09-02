@@ -230,7 +230,28 @@ class Matrix:
             determinante_3x3([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) -> 0
             determinante_3x3([[1, 0, 0], [0, 2, 0], [0, 0, 3]]) -> 6
         """
-        pass
+        if len(matriz) != 3:
+            raise ValueError
+        lon = len(matriz)
+        det = 1
+        mapi = [fi[:] for fi in matriz]
+        for i in range(lon):
+            piv = i
+            for j in range(i + 1, lon):
+                if mapi[j][i] > mapi[piv][i]:
+                    piv = j
+                
+            if mapi[piv][i] == 0:
+                return 0
+            if piv != i:
+                mapi[i], mapi[piv] = mapi[piv], mapi[i]
+                det *= -1
+            det *= mapi[i][i]
+            for j in range(i + 1, lon):
+                facto = mapi[j][i] / mapi[i][i]
+                for k in range(i, lon):
+                    mapi[j][k] -= facto * mapi[i][k]
+        return det
 
     def identidad(self, n):
         """
