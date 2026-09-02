@@ -241,4 +241,12 @@ class Strings:
         Returns:
             list: Lista con las posiciones iniciales de cada ocurrencia
         """
-        pass
+        if texto == subcadena:
+            return [0]
+        if not texto or not subcadena:
+            return []
+        posi = []
+        for i in range(len(texto)):
+            if texto[i:i + len(subcadena)] == subcadena:
+                posi.append(i)
+        return posi
