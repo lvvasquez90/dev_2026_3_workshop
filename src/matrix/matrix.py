@@ -288,7 +288,9 @@ class Matrix:
             diagonal([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) -> [1, 5, 9]
             diagonal([[3, 0], [0, 7]]) -> [3, 7]
         """
-        pass
+        colu = len(matriz)
+        dia = [matriz[i][i] for i in range(colu)]
+        return dia
 
     def es_diagonal(self, matriz):
         """
