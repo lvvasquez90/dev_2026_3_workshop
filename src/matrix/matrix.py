@@ -105,7 +105,7 @@ class Matrix:
         mules = []
         for i in range(len(matriz)):
             nue = []
-            for j in range(len(matriz)):
+            for j in range(len(matriz[i])):
                 mul = matriz[i][j] * escalar
                 nue.append(mul)
             mules.append(mul)
