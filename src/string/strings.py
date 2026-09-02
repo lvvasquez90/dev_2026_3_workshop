@@ -63,7 +63,13 @@ class Strings:
         Returns:
             int: Número de consonantes en la cadena
         """
-        pass
+        voc = ["a", "e", "i", "o", "u"]
+        vcm = [vo.upper() for vo in voc]
+        sma = 0
+        for i in texto:
+            if i not in voc or i not in vcm:
+                sma += 1
+        return sma
     
     def es_anagrama(self, texto1, texto2):
         """
