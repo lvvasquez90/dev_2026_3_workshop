@@ -15,7 +15,7 @@ class Magic:
             int: El n-ésimo número de Fibonacci
         """
         fibo = 0
-        for i in range(n):
+        for i in range(1, n):
             fibo += i
         return fibo
     
