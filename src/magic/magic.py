@@ -160,22 +160,42 @@ class Magic:
             for i in range(1, n):
                 if n % i == 0:
                     lista.append(i)
+        
+        def mayor(dv):
+            mx = dv[0]
+            for i in dv:
+                if i > mx:
+                    mx = i
+            return mx
         divia = []
         divib = []
         if self.es_primo(a) == True and self.es_primo(b) == True:
             return 1
         else:
-            diviso(divia, a)
-            diviso(divib, b)
-            div = [num for num in divia if num in divib]
-            maxi = div[0]
-            if len(div) == 1:
-                return div[-1]
+            if a == 0:
+                diviso(divib, b)
+                if len(div) == 1:
+                    return div[-1]
+                else:
+                    maxi = mayor(div)
+                return maxi
+            elif b == 0:
+                diviso(divia, a)
+                if len(div) == 1:
+                    return div[-1]
+                else:
+                    maxi = mayor(div)
+                return maxi
             else:
-                for i in div:
-                    if i > maxi:
-                        maxi = i
-            return maxi
+                diviso(divia, a)
+                diviso(divib, b)
+                div = [num for num in divia if num in divib]
+                maxi = 0
+                if len(div) == 1:
+                    return div[-1]
+                else:
+                    maxi = mayor(div)
+                return maxi
     
     def mcm(self, a, b):
         """
