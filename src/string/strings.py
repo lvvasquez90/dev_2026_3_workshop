@@ -84,17 +84,18 @@ class Strings:
         """
         textosi1 = texto1.replace(" ", "").lower()
         textosi2 = texto2.replace(" ", "").lower()
-        cont = 0
+        cont = []
         if len(textosi1) != len(textosi2):
             return False
         for i in textosi1:
-            for j in textosi2:
-                if i == j:
-                    cont += 1
-        if cont == len(textosi1):
-            return True
-        else:
-            return False
+            ana = False
+            for j in range(len(textosi2)):
+                if i == textosi2[j] and j not in cont:
+                    cont.append(j)
+                    ana = True
+            if ana == False:
+                return False
+        return True
     
     def contar_palabras(self, texto):
         """
