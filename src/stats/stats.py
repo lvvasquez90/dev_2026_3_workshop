@@ -59,7 +59,15 @@ class Stats:
         Ejemplo:
             moda([1, 2, 2, 3, 3, 3]) -> 3
         """
-        pass
+        mod = 0
+        num1 = []
+        for i in numeros:
+            if i in num1:
+                num1[i] += 1
+            else:
+                num1[i] = 1
+        mod = num1[0]
+        return mod
     
     def desviacion_estandar(self, numeros):
         """
