@@ -135,9 +135,11 @@ class Stats:
             may = i
             for j in numeros:
                 if j >= may:
-                    mni = may
                     may = j
-                elif j < may:
+        for i in numeros:
+            mni = i
+            for j in numeros:
+                if j <= mni:
                     mni = j
         dist = may - mni
         return dist
