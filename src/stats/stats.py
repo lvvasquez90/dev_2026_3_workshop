@@ -37,7 +37,7 @@ class Stats:
         if not numeros:
             return 0
         if len(numeros) % 2 != 0:
-            posi = -(-len(numeros) // 2)
+            posi = len(numeros) // 2
             return numeros[posi]
         else:
             posi = len(numeros) / 2
