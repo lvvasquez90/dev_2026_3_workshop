@@ -34,7 +34,16 @@ class Stats:
             mediana([1, 2, 3, 4, 5]) -> 3.0
             mediana([1, 2, 3, 4]) -> 2.5
         """
-        pass
+        if not numeros:
+            return 0
+        if len(numeros) % 2 != 0:
+            posi = -(-len(numeros) // 2)
+            return numeros[posi]
+        else:
+            posi = len(numeros) / 2
+            num1 = numeros[posi - 1]
+            num2 = numeros[posi]
+            return (num1 + num2) / 2
     
     def moda(self, numeros):
         """
