@@ -166,14 +166,11 @@ class Strings:
             bool: True si la cadena representa un número entero, False en caso contrario
         """
         nume = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-        cont = 0
+        cont = True
         for i in texto:
-            if i == ".":
-                return False
-            if i in nume or i == "-":
-                cont += 1
-        if cont == len(texto):
-            return True
+            if i == "." or i not in nume or i != "-":
+                cont = False
+        return cont
     
     def cifrar_cesar(self, texto, desplazamiento):
         """
