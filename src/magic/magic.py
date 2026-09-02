@@ -156,7 +156,26 @@ class Magic:
         Returns:
             int: El máximo común divisor de a y b
         """
-        pass
+        def diviso(lista, n):
+            for i in range(n):
+                if n % i == 0:
+                    lista.append(i)
+        divia = []
+        divib = []
+        if self.es_primo(a) == True and self.es_primo(b) == True:
+            return 1
+        else:
+            diviso(divia, a)
+            diviso(divib, b)
+            div = [num for num in divia if num in divib]
+            maxi = div[0]
+            if len(div) == 1:
+                return div[-1]
+            else:
+                for i in div:
+                    if i > maxi:
+                        maxi = i
+            return maxi
     
     def mcm(self, a, b):
         """
