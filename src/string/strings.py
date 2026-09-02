@@ -212,7 +212,23 @@ class Strings:
         Returns:
             str: Cadena descifrada
         """
-        pass
+        if not texto:
+            return ""
+        dic = ["a", "b", "c", "d", "e", "f", "g", "h", "i", 
+                "j", "k", "l", "m", "n", "o", "p", "q", "r", 
+                "s", "t", "u", "v", "w", "x", "y", "z"]
+        dicm = [let.upper() for let in dic]
+        cice = ""
+        for i in texto:
+            if i in dic:
+                iac = dic.index(i)
+                inu = (iac - desplazamiento) % len(dic)
+                cice += dic[inu]
+            if i in dicm:
+                iac = dicm.index(i)
+                inu = (iac - desplazamiento) % len(dicm)
+                cice += dicm[inu]
+        return cice
     
     def encontrar_subcadena(self, texto, subcadena):
         """
