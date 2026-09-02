@@ -183,7 +183,18 @@ class Strings:
         Returns:
             str: Cadena cifrada
         """
-        pass
+        if not texto:
+            return ""
+        dic = ["a", "b", "c", "d", "e", "f", "g", "h", "i", 
+               "j", "k", "l", "m", "n", "o", "p", "q", "r", 
+               "s", "t", "u", "v", "w", "x", "y", "z"]
+        cice = ""
+        for i in texto.lower():
+            if i in dic:
+                iac = dic.index(i)
+                inu = (iac + desplazamiento) % len(dic)
+                cice += dic[inu]
+        return cice
     
     def descifrar_cesar(self, texto, desplazamiento):
         """
