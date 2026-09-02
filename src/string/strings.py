@@ -93,6 +93,7 @@ class Strings:
                 if i == textosi2[j] and j not in cont:
                     cont.append(j)
                     ana = True
+                    break
             if ana == False:
                 return False
         return True
