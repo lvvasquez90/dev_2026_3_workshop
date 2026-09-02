@@ -59,15 +59,16 @@ class Stats:
         Ejemplo:
             moda([1, 2, 2, 3, 3, 3]) -> 3
         """
+        if not numeros:
+            return None
         mod = 0
-        num1 = []
+        num1 = {}
         for i in numeros:
-            if i in num1:
-                num1[i] += 1
-                mod = i
-            else:
-                num1[i] = 1
-        return mod
+            num1[i] = num1.get(i, 0) + 1
+            
+        numax = max(num1.values())
+        mod = [n for n, frc in num1.items() if frc == numax]
+        return mod[0]
     
     def desviacion_estandar(self, numeros):
         """
