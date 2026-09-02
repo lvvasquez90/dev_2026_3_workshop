@@ -102,6 +102,8 @@ class Magic:
                 div += i
         if div == n:
             return True
+        else:
+            return False
     
     def triangulo_pascal(self, filas):
         """
