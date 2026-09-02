@@ -211,6 +211,7 @@ class Matrix:
         if len(matriz) != 2:
             raise ValueError
         det=matriz[0][0]*matriz[1][1] - matriz[1][0]*[0][1]
+        return det
 
     def determinante_3x3(self, matriz):
         """
