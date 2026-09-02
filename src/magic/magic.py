@@ -274,11 +274,12 @@ class Magic:
             for fi in matriz:
                 if suma(fi) != sumog:
                     return False
-            for co in range(matriz):
-                if suma(matriz[fi][co] for fi in range(matriz)) != sumog:
+            colu = len(matriz)
+            for co in range(colu):
+                if suma(matriz[fi][co] for fi in range(colu)) != sumog:
                     return False
-            if suma(matriz[i][i] for i in range(matriz)) != sumog:
+            if suma(matriz[i][i] for i in range(colu)) != sumog:
                 return False
-            if suma(matriz[i][i] for i in range(matriz, 0, -1)) != sumog:
+            if suma(matriz[i][i] for i in range(colu, 0, -1)) != sumog:
                 return False
             return True
