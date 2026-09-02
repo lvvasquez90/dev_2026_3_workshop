@@ -115,7 +115,15 @@ class Magic:
         Returns:
             list: Lista de listas que representa el triángulo de Pascal
         """
-        pass
+        psc = [[1]]
+        for i in range(1, filas):
+            pscan = psc[-1]
+            nuepsc = [1]
+            for j in range(len(pscan) - 1):
+                nuepsc.append(pscan[j] + pscan[j + 1])
+            nuepsc.append(1)
+            psc.append(nuepsc)
+        return psc
     
     def factorial(self, n):
         """
