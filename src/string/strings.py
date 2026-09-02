@@ -151,7 +151,7 @@ class Strings:
         """
         if not texto:
             return ""
-        while "  " in texto:
+        while " " in texto:
             sep = texto.replace("  ", " ")
         return sep
     
