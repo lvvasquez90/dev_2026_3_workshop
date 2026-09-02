@@ -188,7 +188,7 @@ class Strings:
         dic = ["a", "b", "c", "d", "e", "f", "g", "h", "i", 
                "j", "k", "l", "m", "n", "o", "p", "q", "r", 
                "s", "t", "u", "v", "w", "x", "y", "z"]
-        dicm = dic.upper()
+        dicm = [let.upper() for let in dic]
         cice = ""
         for i in texto.lower():
             if i in dic or i in dicm:
