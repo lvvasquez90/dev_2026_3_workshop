@@ -223,7 +223,14 @@ class Magic:
         Returns:
             int: La suma de los dígitos de n
         """
-        pass
+        numi = [int(dig) for dig in str(n)]
+        sumi = 0
+        if len(numi) == 1:
+            return n
+        else:
+            for i in numi:
+                sumi += i
+            return sumi
     
     def es_numero_armstrong(self, n):
         """
