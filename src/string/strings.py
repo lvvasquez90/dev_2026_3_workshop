@@ -30,10 +30,10 @@ class Strings:
         Returns:
             str: Cadena invertida
         """
-        if not texto:
-            return ""
-        elif len(texto) == 1:
-            return texto
+        #if not texto:
+        #    return ""
+        #elif len(texto) == 1:
+        #    return texto
         inv = ""
         for i in texto:
             inv += i
