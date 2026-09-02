@@ -14,6 +14,7 @@ class Strings:
         Returns:
             bool: True si es palíndromo, False en caso contrario
         """
+        texto = texto.replace(" ", "")
         rev = texto[::-1]
         if rev == texto:
             return True
