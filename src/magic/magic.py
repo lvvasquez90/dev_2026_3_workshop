@@ -135,7 +135,12 @@ class Magic:
         Returns:
             int: El factorial de n
         """
-        pass
+        facto = 0
+        if n == 0 or n == 1:
+            return 1
+        for i in range(n):
+            facto *= i
+        return facto
     
     def mcd(self, a, b):
         """
