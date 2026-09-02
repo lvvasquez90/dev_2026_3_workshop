@@ -238,7 +238,7 @@ class Matrix:
         for i in range(lon):
             piv = i
             for j in range(i + 1, lon):
-                if mapi[j][i] > mapi[piv][i]:
+                if abs(mapi[j][i]) > abs(mapi[piv][i]):
                     piv = j
                 
             if mapi[piv][i] == 0:
