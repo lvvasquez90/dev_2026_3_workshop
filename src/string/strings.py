@@ -165,10 +165,10 @@ class Strings:
         Returns:
             bool: True si la cadena representa un número entero, False en caso contrario
         """
-        nume = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+        nume = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-"]
         cont = True
         for i in texto:
-            if i == "." and i not in nume or i != "-":
+            if i == "." and i not in nume:
                 cont = False
         return cont
     
