@@ -50,7 +50,16 @@ class Matrix:
         Ejemplo:
             resta_matrices([[5, 6], [7, 8]], [[1, 2], [3, 4]]) -> [[4, 4], [4, 4]]
         """
-        pass
+        if len(A) != len(B):
+            raise ValueError
+        res = []
+        for i in range(len(A)):
+            finu = []
+            for j in range(len(A[0])):
+                suma = A[i][j] - B[i][j]
+                finu.append(suma)
+            res.append(finu)
+        return res
 
     def multiplicar_matrices(self, A, B):
         """
