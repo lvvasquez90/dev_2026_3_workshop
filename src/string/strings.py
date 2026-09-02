@@ -149,7 +149,11 @@ class Strings:
         Returns:
             str: Cadena sin espacios duplicados
         """
-        pass
+        if not texto:
+            return ""
+        while "  " in texto:
+            sep = texto.replace("  ", " ")
+        return sep
     
     def es_numero_entero(self, texto):
         """
