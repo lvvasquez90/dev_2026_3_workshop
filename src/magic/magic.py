@@ -16,7 +16,7 @@ class Magic:
         """
         fibo = 0
         for i in range(n):
-            fibo += n
+            fibo += i
         return fibo
     
     def secuencia_fibonacci(self, n):
