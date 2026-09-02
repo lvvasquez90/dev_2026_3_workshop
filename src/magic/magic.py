@@ -157,7 +157,7 @@ class Magic:
             int: El máximo común divisor de a y b
         """
         def diviso(lista, n):
-            for i in range(1, n):
+            for i in range(1, n + 1):
                 if n % i == 0:
                     lista.append(i)
         
