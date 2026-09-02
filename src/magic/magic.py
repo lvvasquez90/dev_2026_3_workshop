@@ -280,6 +280,6 @@ class Magic:
                     return False
             if suma(matriz[i][i] for i in range(colu)) != sumog:
                 return False
-            if suma(matriz[i][i] for i in range(colu, 0, -1)) != sumog:
+            if suma(matriz[i][colu - 1 - i] for i in range(colu)) != sumog:
                 return False
             return True
