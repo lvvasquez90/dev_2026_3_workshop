@@ -132,7 +132,6 @@ class Stats:
         """
         may, mni = 0, 0
         for i in numeros:
-            may = i
             for j in numeros:
                 if j > may:
                     mni = may
