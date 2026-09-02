@@ -131,10 +131,12 @@ class Stats:
             rango([1, 5, 3, 9, 2]) -> 8
         """
         mni = 0
-        may = numeros[0]
+        may = numeros[1]
         for i in numeros:
-            if may < mni:
-                mni = may
-                may = i
+            if i > mni:
+                mni = i
+            if mni > may:
+                may, mni = mni, may
+                
         dist = may - mni
         return dist
