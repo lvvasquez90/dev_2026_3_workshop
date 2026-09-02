@@ -36,7 +36,7 @@ class Strings:
         #    return texto
         inv = ""
         for i in texto:
-            inv += i
+            inv = i + inv
         return inv
     
     def contar_vocales(self, texto):
