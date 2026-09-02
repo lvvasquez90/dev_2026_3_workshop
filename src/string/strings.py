@@ -128,7 +128,7 @@ class Strings:
             return 0
         texto = texto.strip()
         sep = texto.split()
-        sep = [pal[0].upper() for pal in sep]
+        sep = [pal[0].upper() + pal[1:] for pal in sep]
         sep = " ".join(sep)
         return sep
     
