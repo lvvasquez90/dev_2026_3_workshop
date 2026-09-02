@@ -17,11 +17,16 @@ class Magic:
         a = 0
         sec = []
         fibo = 1
-        while len(sec) < n:
-            sec.append(a)
-            a = fibo
-            fibo = a + fibo
-        return sec[n - 1]
+        if n == 0 or n == 1:
+            return n
+        elif n < 0:
+            return None
+        else:
+            while len(sec) < n:
+                sec.append(a)
+                a = fibo
+                fibo = a + fibo
+            return sec[n - 1]
     
     def secuencia_fibonacci(self, n):
         """
