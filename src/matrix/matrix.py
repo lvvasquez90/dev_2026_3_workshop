@@ -79,7 +79,17 @@ class Matrix:
         Ejemplo:
             multiplicar_matrices([[1, 2], [3, 4]], [[5, 6], [7, 8]]) -> [[19, 22], [43, 50]]
         """
-        pass
+        if len(A[0]) != len(B):
+            raise ValueError
+        res = []
+        for i in range(len(A)):
+            finu = []
+            for j in range(len(B[0])):
+                for k in range(len(A[0])):
+                    mult += A[i][k] - B[k][j]
+                    finu.append(mult)
+            res.append(finu)
+        return res
 
     def multiplicar_escalar(self, matriz, escalar):
         """
