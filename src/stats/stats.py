@@ -64,9 +64,9 @@ class Stats:
         for i in numeros:
             if i in num1:
                 num1[i] += 1
+                mod = i
             else:
                 num1[i] = 1
-        mod = num1[0]
         return mod
     
     def desviacion_estandar(self, numeros):
