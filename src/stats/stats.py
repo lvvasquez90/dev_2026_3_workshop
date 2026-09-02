@@ -130,11 +130,14 @@ class Stats:
         Ejemplo:
             rango([1, 5, 3, 9, 2]) -> 8
         """
+        may, mni = 0, 0
         for i in numeros:
             may = i
             for j in numeros:
                 if j > may:
                     mni = may
                     may = j
+                elif j < may:
+                    mni = j
         dist = may - mni
         return dist
