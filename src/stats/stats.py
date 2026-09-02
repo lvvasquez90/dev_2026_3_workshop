@@ -84,6 +84,8 @@ class Stats:
         Ejemplo:
             desviacion_estandar([1, 2, 3, 4, 5]) -> 1.41...
         """
+        if not numeros:
+            return 0
         u = self.promedio(numeros)
         suma = 0
         for i in numeros:
