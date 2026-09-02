@@ -184,6 +184,8 @@ class Matrix:
             for i in n:
                 su += i
             return su
+        if len(matriz) != len(matriz[0]):
+            raise ValueError
         colu = len(matriz)
         tra = suma(matriz[i][i] for i in range(colu))
         return tra
